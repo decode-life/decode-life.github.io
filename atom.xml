@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>杰哥</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-09-06T01:34:54.473Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>decode-life</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jdk安徽及环境配置一篇搞定</title>
+    <link href="http://yoursite.com/2018/09/05/jdk%E5%AE%89%E5%BE%BD%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E4%B8%80%E7%AF%87%E6%90%9E%E5%AE%9A/"/>
+    <id>http://yoursite.com/2018/09/05/jdk安徽及环境配置一篇搞定/</id>
+    <published>2018-09-05T09:41:39.000Z</published>
+    <updated>2018-09-06T01:34:54.473Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>作者 <a href="https://www.zhihu.com/people/decode-life/activities" target="_blank" rel="noopener">Decodelife</a> 转载请注明出处</p></blockquote><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><blockquote><p>鉴于广大Java爱好者或初学者甚至老手，在面临一个新的开发环境是，总是要搭建一套初始工作环境，配置环境变量，有些时候还得是不是查阅下教程，特此整理了一份各个环境下的配置步骤，供大家查阅，<strong>以后大家环境变量一篇就够了</strong>，如果问题请指正</p></blockquote><h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><ol><li><p><strong>下载jdk</strong></p><ul><li>首先我们需要下载java开发工具包JDK，下载地址：<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>，点击如下下载按钮：<br><img src="https://upload-images.jianshu.io/upload_images/1762862-1668938a243be4ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li><li>在下载页面中你需要选择接受许可，并根据自己的系统选择对应的版本，本文以 Window 64位系统为例：<br> <img src="https://upload-images.jianshu.io/upload_images/1762862-8ceb3654ef8e9c2b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li><li><p>下载后JDK的安装根据提示进行，还有安装JDK的时候也会安装JRE，一并安装就可以了。</p><p>安装JDK，安装过程中可以自定义安装目录等信息，例如我们选择安装目录为 C:\Program Files (x86)\Java\jdk1.8.0_91。</p></li></ul><ol start="2"><li><p><strong>配置环境变量</strong></p><ul><li><p>安装完成后，右击”我的电脑”，点击”属性”，选择”高级系统设置”；<br><img src="https://upload-images.jianshu.io/upload_images/1762862-212fa4e378532202.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p></li><li><p>选择”高级”选项卡，点击”环境变量”；<br><img src="https://upload-images.jianshu.io/upload_images/1762862-517a9f4c11f054db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p></li><li><p>然后就会出现如下图所示的画面：<br><img src="https://upload-images.jianshu.io/upload_images/1762862-9929ceb9a65aea9b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p></li><li><p>在”系统变量”中设置3项属性，JAVA_HOME,PATH,CLASSPATH(大小写无所谓),若已存在则点击”编辑”，不存在则点击”新建”。<br><em>变量设置参数如下</em><br>变量名：JAVA_HOME<br>变量值：C:\Program Files (x86)\Java\jdk1.8.0_91        // 要根据自己的实际路径配置<br>变量名：CLASSPATH<br>变量值：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;         //记得前面有个”.”<br>变量名：Path<br>变量值：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</p></li><li><p>JAVA_HOME 设置<br><img src="https://upload-images.jianshu.io/upload_images/1762862-503d5862199a0d00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/1762862-05ad455ebb469487.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p></li><li>PATH设置<br><img src="https://upload-images.jianshu.io/upload_images/1762862-99241e7744cd800f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/1762862-68e700b53a39b971.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><blockquote><p>注意：在 Windows10 中，Path 变量里是分条显示的，我们需要将 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin; 分开添加，否则无法识别：</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%JAVA_HOME%\bin;</span><br><span class="line">%JAVA_HOME%\jre\bin;</span><br></pre></td></tr></table></figure></li></ul><blockquote><p><img src="https://upload-images.jianshu.io/upload_images/1762862-5bbd3b7decbaed89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p></blockquote><ul><li>CLASSPATH 设置<br><img src="https://upload-images.jianshu.io/upload_images/1762862-5331fd0168412f51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><blockquote><p><strong>注意</strong>：如果使用1.5以上版本的JDK，不用设置CLASSPATH环境变量，也可以正常编译和运行Java程序</p></blockquote></li></ul></li></ol></li><li><p><strong>测试JDK是否安装成功</strong></p><ul><li><p>“开始”-&gt;”运行”，键入”cmd”；</p></li><li><p>键入命令: java -version、java、javac 几个命令，出现以下信息，说明环境变量配置成功；<br><img src="https://upload-images.jianshu.io/upload_images/1762862-2e4f279991d5881a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p></li></ul></li></ol><hr><h2 id="Linux（CentOS）MacOS类同"><a href="#Linux（CentOS）MacOS类同" class="headerlink" title="Linux（CentOS）MacOS类同"></a>Linux（CentOS）MacOS类同</h2><ol><li><p><strong>判断是否安装</strong></p><p> 首先，我们得判断机子上是不是安装了jdk，命令终端输入如下命令：</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br><span class="line"># 输出如下</span><br><span class="line">java version &quot;1.7.0_45&quot;</span><br><span class="line">OpenJDK Runtime Environment (rhel-2.4.3.2.el6_4-i386 u45-b15)</span><br><span class="line">OpenJDK Server VM (build 24.45-b08, mixed mode)</span><br></pre></td></tr></table></figure><p> 这看起来好像我的机子中已经安装了jdk，但是当我使用javac时，会提示：</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-bash: javac: command not found</span><br></pre></td></tr></table></figure><p> 这说明第一个java命令，不是安装的jdk中的java命令，而是在$PATH的所有路径下有一个可以执行的java文件，说明jdk还是没有正确安装。这个要特别注意。</p></li><li><p><strong>安装jdk</strong></p><ul><li>去<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a>中下载jdk的安装文件。由于我的Linux是32位的，因此我下载jdk-8u25-linux-i586.tar.gz文件。</li><li><p>新建/usr/java文件夹，将jdk-8u25-linux-i586.tar.gz放到该文件夹中，并将工作目录切换到/usr/java目录下。</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /usr</span><br><span class="line">## 创建目录（根据自己喜欢定义名称）</span><br><span class="line">mkdir java</span><br><span class="line">## 从官网下载压缩包</span><br><span class="line">wget http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-i586.tar.gz</span><br></pre></td></tr></table></figure></li><li><p>执行命令tar -zxvf jdk-8u25-linux-i586.gz 进行解压，解压后发现/usr/java多了一个jdk1.8.0_25文件夹。</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> ## 解压文件</span><br><span class="line">tar -xzvf jdk-8u181-linux-i586.tar.gz</span><br></pre></td></tr></table></figure></li><li><p>通过以上步骤，jdk就已经全部安装完成了。下面，就是环境变量的配置。</p></li></ul></li><li><p><strong>配置环境变量</strong></p><ul><li>使用vim /etc/profile编辑profile文件</li><li><p>在/etc/profile底部加入如下内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=/usr/java/jdk1.8.0_25</span><br><span class="line">PATH=$JAVA_HOME/bin:$PATH</span><br><span class="line">CLASSPATH=$JAVA_HOME/jre/lib/ext:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export PATH JAVA_HOME CLASSPATH</span><br></pre></td></tr></table></figure></li><li><p>以上，环境变量配置完成。</p><blockquote><ol><li>需要注意的是，PATH在配置的时候，一定要把\$JAVA_HOME/bin放在前面，不然使用java命令时，系统会找到以前的java，再不往下找了。这样java这个可执行文件运行的目录其实不在\$JAVA_HOME/bin下，而在其它目录下，会造成很大的问题。</li><li>还要注意，以前其它教程写的CLASSPATH=$JAVA_HOME/lib.tools.jar，不知道以前的版本是怎么样的，现在的版本是没有这样的jar包的。</li></ol></blockquote></li><li><p>最后使用如下命令让profile文件立即生效。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure></li></ul></li><li><p><strong>命令测试</strong></p><ul><li>使用javac命令，不会出现command not found错误</li><li><p>使用java -version，出现版本为java version “1.8.0_25”<br><img src="https://upload-images.jianshu.io/upload_images/1762862-dc464a62d6f9a7bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p></li><li><p>echo \$JAVA_HOME, echo \$CLASSPATH, echo $PATH，看看自己的配置是否都正确。</p></li></ul></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;作者 &lt;a href=&quot;https://www.zhihu.com/people/decode-life/activities&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Decodelife&lt;/a&gt; 转载请注明出处&lt;/p&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="jdk" scheme="http://yoursite.com/tags/jdk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/09/04/hello-world/"/>
+    <id>http://yoursite.com/2018/09/04/hello-world/</id>
+    <published>2018-09-04T11:06:06.753Z</published>
+    <updated>2018-09-04T11:06:06.753Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
