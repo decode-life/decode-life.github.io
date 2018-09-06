@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | 杰哥</title>
+  <title>带你入门java8新特性 | 杰哥</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="杰哥">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="它是什么术语定义 百度百科定义： “Lambda 表达式”(lambda expression)是一个==匿名函数==，Lambda表达式基于数学中的λ演算得名，直接对应于其中的lambda抽象(lambda abstraction)，是一个匿名函数，即没有函数名的函数。Lambda表达式可以表示闭包  java中的实现方式 lambda表达式的目标类型是“函数接口（functional inte">
+<meta name="keywords" content="java8 lambda">
+<meta property="og:type" content="article">
+<meta property="og:title" content="带你入门java8新特性">
+<meta property="og:url" content="http://yoursite.com/2018/09/06/带你入门java8新特性/index.html">
 <meta property="og:site_name" content="杰哥">
+<meta property="og:description" content="它是什么术语定义 百度百科定义： “Lambda 表达式”(lambda expression)是一个==匿名函数==，Lambda表达式基于数学中的λ演算得名，直接对应于其中的lambda抽象(lambda abstraction)，是一个匿名函数，即没有函数名的函数。Lambda表达式可以表示闭包  java中的实现方式 lambda表达式的目标类型是“函数接口（functional inte">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-09-06T12:04:46.652Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="杰哥">
+<meta name="twitter:title" content="带你入门java8新特性">
+<meta name="twitter:description" content="它是什么术语定义 百度百科定义： “Lambda 表达式”(lambda expression)是一个==匿名函数==，Lambda表达式基于数学中的λ演算得名，直接对应于其中的lambda抽象(lambda abstraction)，是一个匿名函数，即没有函数名的函数。Lambda表达式可以表示闭包  java中的实现方式 lambda表达式的目标类型是“函数接口（functional inte">
   
     <link rel="alternative" href="/atom.xml" title="杰哥" type="application/atom+xml">
   
@@ -144,36 +149,115 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-带你入门java8新特性" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/06/带你入门java8新特性/" class="archive-article-date">
-  	<time datetime="2018-09-06T12:02:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/06/带你入门java8新特性/">带你入门java8新特性</a>
+    <h1 class="article-title" itemprop="name">
+      带你入门java8新特性
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/09/06/带你入门java8新特性/" class="archive-article-date">
+  	<time datetime="2018-09-06T12:02:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="它是什么"><a href="#它是什么" class="headerlink" title="它是什么"></a>它是什么</h1><h3 id="术语定义"><a href="#术语定义" class="headerlink" title="术语定义"></a>术语定义</h3><blockquote>
+<p><strong>百度百科定义：</strong> “Lambda 表达式”(lambda expression)是一个==匿名函数==，Lambda表达式基于数学中的λ演算得名，直接对应于其中的lambda抽象(lambda abstraction)，是一个匿名函数，即没有函数名的函数。Lambda表达式可以表示闭包</p>
+</blockquote>
+<h1 id="java中的实现方式"><a href="#java中的实现方式" class="headerlink" title="java中的实现方式"></a>java中的实现方式</h1><blockquote>
+<p>lambda表达式的目标类型是“函数接口（functional interface）”，这是Java8新引入的概念。<strong>它的定义是：</strong> 一个接口，如果只有一个显式声明的抽象方法，那么它就是一个函数接口。一般用@FunctionalInterface标注出来（也可以不标）。</p>
+</blockquote>
+<h2 id="Lambda表达式-vs-匿名类"><a href="#Lambda表达式-vs-匿名类" class="headerlink" title="Lambda表达式 vs 匿名类"></a>Lambda表达式 vs 匿名类</h2><blockquote>
+<p>既然lambda表达式即将正式取代Java代码中的匿名内部类，那么有必要对二者做一个比较分析。一个关键的不同点就是关键字 this。匿名类的 this 关键字指向匿名类，而lambda表达式的 this 关键字指向包围lambda表达式的类。另一个不同点是二者的编译方式。Java编译器将lambda表达式编译成类的私有方法。使用了Java 7的 invokedynamic 字节码指令来动态绑定这个方法。</p>
+</blockquote>
+<h1 id="同类技术："><a href="#同类技术：" class="headerlink" title="同类技术："></a>同类技术：</h1><p>Python， Ruby， Lua</p>
+<h1 id="为什么会出现"><a href="#为什么会出现" class="headerlink" title="为什么会出现"></a>为什么会出现</h1><ol>
+<li>简化代码</li>
+<li>有些运算中的变量甚至是算法函数过程其实不是必须要定义出来，只是中间过渡一下</li>
+<li>对之后stream接口集合的便利操作提供基础支持，lambda 表达式能简化集合上数据的多线程或者多核的处理，提供更快的集合处理速度</li>
+</ol>
+<h1 id="实例走一波"><a href="#实例走一波" class="headerlink" title="实例走一波"></a>实例走一波</h1><h3 id="1-线程创建"><a href="#1-线程创建" class="headerlink" title="1. 线程创建"></a>1. 线程创建</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//lambda之前</span><br><span class="line">new Thread(new Runnable()&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void run()&#123;</span><br><span class="line">        System.out.println(&quot;我在努力跑&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;).start();</span><br><span class="line"></span><br><span class="line">//lambda之后</span><br><span class="line">new Thread(() -&gt; System.out.println(&quot;我起跑更快&quot;)).start();</span><br></pre></td></tr></table></figure>
+<h3 id="2-Predicate-条件函数式接口，并且可以多个条件过滤"><a href="#2-Predicate-条件函数式接口，并且可以多个条件过滤" class="headerlink" title="2. Predicate 条件函数式接口，并且可以多个条件过滤"></a>2. Predicate 条件函数式接口，并且可以多个条件过滤</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Predicate startsWithJ = (n) -&gt; n.startsWith(&quot;J&quot;);</span><br><span class="line"></span><br><span class="line">Predicate fourLetterLong = (n) -&gt; n.length() ==4;</span><br><span class="line"></span><br><span class="line">names.stream().filter(startsWithJ.and(fourLetterLong))</span><br><span class="line"></span><br><span class="line">.forEach((n) -&gt; System.out.print(&quot;nName, which starts with &apos;J&apos; and four letter long is : &quot;+ n));</span><br></pre></td></tr></table></figure>
+<h3 id="3-stream-接口"><a href="#3-stream-接口" class="headerlink" title="3. stream 接口"></a>3. stream 接口</h3><ul>
+<li><p><strong>3.1 map 操作</strong></p>
+<p>  本例介绍最广为人知的函数式编程概念map。它允许你将对象进行转换。例如在本例中，我们将 costBeforeTax 列表的每个元素转换成为税后的值。我们将 x -&gt; x*x lambda表达式传到 map() 方法，后者将其应用到流中的每一个元素。然后用 forEach() 将列表元素打印出来。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 不使用lambda表达式为每个订单加上12%的税</span><br><span class="line">List costBeforeTax = Arrays.asList(100, 200, 300, 400, 500);</span><br><span class="line">for (Integer cost : costBeforeTax) &#123;</span><br><span class="line">    double price = cost + .12*cost;</span><br><span class="line">    System.out.println(price);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">// 使用lambda表达式</span><br><span class="line">List costBeforeTax = Arrays.asList(100, 200, 300, 400, 500);</span><br><span class="line">costBeforeTax.stream().map((cost) -&gt; cost + .12*cost).forEach(System.out::println);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>3.2 reduce操作</strong></p>
+<p>  在上个例子中，可以看到map将集合类（例如列表）元素进行转换的。还有一个 reduce() 函数可以将所有值合并成一个。Map和Reduce操作是函数式编程的核心操作，因为其功能，reduce 又被称为折叠操作。另外，reduce 并不是一个新的操作，你有可能已经在使用它。SQL中类似 sum()、avg() 或者 count() 的聚集函数，实际上就是 reduce 操作，因为它们接收多个值并返回一个值。流API定义的 reduceh() 函数可以接受lambda表达式，并对所有值进行合并。IntStream这样的类有类似 average()、count()、sum() 的内建方法来做 reduce 操作，也有mapToLong()、mapToDouble() 方法来做转换。这并不会限制你，你可以用内建方法，也可以自己定义。在这个Java 8的Map Reduce示例里，我们首先对所有价格应用 12% 的VAT，然后用 reduce() 方法计算总和。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 为每个订单加上12%的税</span><br><span class="line">// 老方法：</span><br><span class="line">List costBeforeTax = Arrays.asList(100, 200, 300, 400, 500);</span><br><span class="line">double total = 0;</span><br><span class="line">for (Integer cost : costBeforeTax) &#123;</span><br><span class="line">    double price = cost + .12*cost;</span><br><span class="line">    total = total + price;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(&quot;Total : &quot; + total);</span><br><span class="line"> </span><br><span class="line">// 新方法：</span><br><span class="line">List costBeforeTax = Arrays.asList(100, 200, 300, 400, 500);</span><br><span class="line">double bill = costBeforeTax.stream().map((cost) -&gt; cost + .12*cost).reduce((sum, cost) -&gt; sum + cost).get();</span><br><span class="line">System.out.println(&quot;Total : &quot; + bill);</span><br></pre></td></tr></table></figure>
+<h4 id="4-匿名方法改进之路（Lambda-和方法引用实战）"><a href="#4-匿名方法改进之路（Lambda-和方法引用实战）" class="headerlink" title="4. 匿名方法改进之路（Lambda 和方法引用实战）"></a>4. 匿名方法改进之路（Lambda 和方法引用实战）</h4><ul>
+<li><p>第1种：传递代码</p>
+<p>  Java 8的API已经为你提供了一个 List 可用的 sort 方法，那么如何把排序策略传递给 sort 方法呢？sort方法的签名是这样的：</p>
+<p>  void sort(Comparator&lt;? super E&gt; c)<br>  它需要一个 Comparator 对象来比较两个Apple！这就是在Java中传递策略的方式：它们必须包裹在一个对象里。我们说 sort 的行为被参数化了：传递给它的排序策略不同，其行为也会 不同。<br>  第一个解决方案可以是这样的：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class AppleComparator implements Comparator&lt;Apple&gt; &#123;</span><br><span class="line"></span><br><span class="line">        @Override</span><br><span class="line">        public int compare(Apple o1, Apple o2) &#123;</span><br><span class="line">            return o1.getWeight().compareTo(o2.getWeight());</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">apples.sort(new AppleComparator())</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第2步：使用匿名类</p>
+<p>  可以使用匿名类来改进方案，而不是实现一个 Comparator 却只实例化一次：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">apples.sort(new Comparator&lt;Apple&gt;() &#123;</span><br><span class="line">  @Override</span><br><span class="line">  public int compare(Apple o1, Apple o2) &#123;</span><br><span class="line">      return o1.getWeight().compareTo(o2.getWeight());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第3步：使用 Lambda 表达式</p>
+<p>  接下来使用 Lambda 表达式来改进方案：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apples.sort((Apple a1,Apple a2) -&gt; a1.getWeight().compareTo(a2.getWeight()));</span><br></pre></td></tr></table></figure>
+<p>  Comparator 具有一个叫作 comparing 的静态辅助方法，它可以接受一个 Function 来提取 Comparable 键值，并生成一个 Comparator 对象，它可以像下面这样用（注意你现在传递的Lambda只有一 个参数：Lambda说明了如何从苹果中提取需要比较的键值）：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apples.sort(Comparator.comparing(((Apple apple) -&gt; apple.getWeight())));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第4步：使用方法引用</p>
+<p>  方法引用就是替代那些转发参数的 Lambda 表达式的语法糖。可以用方法引 用改进方案如下：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apples.sort(Comparator.comparing(Apple::getWeight));</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>如上所述，lambda表达式等新特性给我们编程实现带来了新的支持可能，更加方便的计算（尤其是集合）</p>
+<ul>
+<li><p>Lambda表达式可以理解为一种匿名函数：它没有名称，但有参数列表、函数主体、返回 类型，可能还有一个可以抛出的异常的列表。</p>
+</li>
+<li><p>Lambda表达式让你可以简洁地传递代码。</p>
+</li>
+<li><p>函数式接口就是仅仅声明了一个抽象方法的接口。</p>
+</li>
+<li><p>只有在接受函数式接口的地方才可以使用Lambda表达式。</p>
+</li>
+<li><p>Lambda表达式允许你直接内联，为函数式接口的抽象方法提供实现，并且将整个表达式作为函数式接口的一个实例。</p>
+</li>
+<li><p>Java 8自带一些常用的函数式接口，放在java.util.function包里，包括Predicate<t>、Function&lt;T,R&gt;、Supplier<t>、Consumer<t>和BinaryOperator<t>。</t></t></t></t></p>
+</li>
+<li><p>为了避免装箱操作，对Predicate<t>和Function&lt;T, R&gt;等通用函数式接口的原始类型特化：IntPredicate、IntToLongFunction等。</t></p>
+</li>
+<li><p>环绕执行模式（即在方法所必需的代码中间，你需要执行点儿什么操作，比如资源分配 和清理）可以配合 Lambda 提高灵活性和可重用性。</p>
+</li>
+<li><p>Lambda 表达式所需要代表的类型称为目标类型。</p>
+</li>
+<li><p>方法引用让你重复使用现有的方法实现并直接传递它们。</p>
+</li>
+<li><p>Comparator、Predicate和Function等函数式接口都有几个可以用来结合 Lambda 表达式的默认方法。</p>
+</li>
+</ul>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ol>
+<li><a href="http://www.jianshu.com/p/f569c090ec15" target="_blank" rel="noopener">理解java8 lambda http://www.jianshu.com/p/f569c090ec15</a></li>
+<li><a href="http://www.importnew.com/16436.html" target="_blank" rel="noopener">Java8 lambda表达式10个示例</a></li>
+<li><a href="http://www.jianshu.com/p/4b6a875694f0" target="_blank" rel="noopener">java8 新特性</a></li>
+<li><a href="http://www.jianshu.com/p/b0ccbea7213e" target="_blank" rel="noopener">深入理解Java 8 Lambda表达式（Oracle官方文档版）</a></li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -185,84 +269,116 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/09/06/带你入门java8新特性/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/05/jdk安徽及环境配置一篇搞定/" class="archive-article-date">
-  	<time datetime="2018-09-05T09:41:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/05/jdk安徽及环境配置一篇搞定/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jdk安徽及环境配置一篇搞定</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/05/jdk安徽及环境配置一篇搞定/">jdk安徽及环境配置一篇搞定</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">jdk</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/04/hello-world/" class="archive-article-date">
-  	<time datetime="2018-09-04T11:06:06.753Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/04/hello-world/">Hello World</a>
-    </h1>
+  <div id="SOHUCS" sid="带你入门java8新特性" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cytNLQMaM",
+        conf: "b870a7724d9e12f6fc7953a1c2f64148"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -285,8 +401,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
